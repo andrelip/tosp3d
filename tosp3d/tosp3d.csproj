@@ -57,6 +57,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="js\camera.js" />
+    <Content Include="js\objs\container40.js" />
+    <Content Include="js\objs\ruaTransversal.js" />
+    <Content Include="js\objs\ruaPrincipal.js" />
+    <Content Include="js\objs\quadra.js" />
+    <Content Include="js\objs\gate.js" />
+    <Content Include="js\objs\container20.js" />
+    <Content Include="js\fps.js" />
+    <Content Include="js\luz.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\patio.js" />
+    <Content Include="libs\dat.gui.min.js" />
+    <Content Include="libs\stats.min.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,6 +79,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\FirstPersonControls.js" />
+    <Content Include="libs\three.min.js" />
+    <Content Include="textures\hamburgsud.png" />
+    <Content Include="textures\maersk.png" />
+    <Content Include="textures\msc.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
