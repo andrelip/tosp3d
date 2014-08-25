@@ -9,9 +9,9 @@ function Patio() {
   };
 
   this.init = function(scene) {
-    var planeGeometry = new THREE.PlaneGeometry(2000, 2000, 40, 40);
-    var planeMaterial = new THREE.MeshLambertMaterial({ color: 0x9db3b5, overdraw: true });
-    this.area = new THREE.Mesh(planeGeometry, planeMaterial);
+    this.planeGeometry = new THREE.PlaneGeometry(2000, 2000, 40, 40);
+    this.planeMaterial = new THREE.MeshLambertMaterial({ color: 0xcccccc, overdraw: true });
+    this.area = new THREE.Mesh(this.planeGeometry, this.planeMaterial);
 
     this.area.receiveShadow = true;
     this.area.rotation.x = -0.5 * Math.PI;

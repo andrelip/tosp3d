@@ -1,4 +1,4 @@
-function Quadra(posX, posY, posZ) {
+function Quadra(posX, posY, posZ, qtdLin, qtdCol, xCel, zCel) {
   //
   // Interface Publica
   //
@@ -6,9 +6,7 @@ function Quadra(posX, posY, posZ) {
   };
 
   this.init = function (scene) {
-      var xCelula = 24.4;
-      var zCelula = 60.6;
-      this.plano = new THREE.PlaneGeometry(10 * xCelula, 10 * zCelula, 1, 1);
+      this.plano = new THREE.PlaneGeometry(qtdLin * xCel, qtdCol * zCel, 1, 1);
       this.matQuadra = new THREE.MeshPhongMaterial({ color: 0xffffff, overdraw: true });
       this.quadra = new THREE.Mesh(this.plano, this.matQuadra);
       this.quadra.rotation.x = -0.5 * Math.PI;

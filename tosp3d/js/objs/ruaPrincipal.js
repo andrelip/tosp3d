@@ -7,7 +7,8 @@ function RuaPrincipal(posX, posY, posZ) {
 
   this.init = function (scene) {
       this.plano = new THREE.PlaneGeometry(2000, 90, 1, 1);
-      this.rua = new THREE.Mesh(this.plano);
+      this.mat = new THREE.MeshLambertMaterial({ color: 0x9db3b5, overdraw: true });
+      this.rua = new THREE.Mesh(this.plano, this.mat);
       this.rua.rotation.x = -0.5 * Math.PI;
       this.rua.receiveShadow = false;
       this.rua.position.x = posX; //0;
