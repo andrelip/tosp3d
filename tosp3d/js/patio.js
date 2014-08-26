@@ -16,6 +16,11 @@ function Patio() {
     this.area.receiveShadow = true;
     this.area.rotation.x = -0.5 * Math.PI;
     scene.add(this.area);
+
+    var shape = new THREE.TextGeometry("Game Over", { font: 'helvetiker', weight: 'normal' });
+    var wrapper = new THREE.MeshNormalMaterial({ color: 0x00ff00 });
+    var words = new THREE.Mesh(shape, wrapper);
+    scene.add(words);
   };
 
   this.update = function() {

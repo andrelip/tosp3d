@@ -7,7 +7,7 @@ function Camera() {
 
   this.init = function(scene) {
     this.camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
-    this.camera.position.x = -900;
+    this.camera.position.x = -990;
     this.camera.position.y = 20;
     this.camera.position.z = 0;
     this.camera.rotation.x = -45 * Math.PI / 180;
