@@ -14,8 +14,8 @@ function Camera() {
 
     this.camControls = new THREE.FirstPersonControls(this.camera);
     this.camControls.movementSpeed = 100;
-    this.camControls.lookVertical = false;
-    this.camControls.lookSpeed = 0.01;
+    this.camControls.lookVertical = true;
+    this.camControls.lookSpeed = 0.1;//0.01
   };
 
   this.update = function(delta) {

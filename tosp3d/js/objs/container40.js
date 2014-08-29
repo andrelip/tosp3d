@@ -6,13 +6,14 @@ function Container40(posX, posY, posZ, texture, hexColor) {
   };
 
   this.init = function (scene) {
+
      var containerMaterials = [ 
-        new THREE.MeshBasicMaterial({ color: hexColor }), // right face
-        new THREE.MeshBasicMaterial({ color: hexColor }), // left face
-        new THREE.MeshBasicMaterial({ color: hexColor }), // top face
-        new THREE.MeshBasicMaterial({ color: hexColor }), // bottom face
+        new THREE.MeshBasicMaterial({ color: hexColor, wireframe: true, wireframeLinewidth: 4 }), // right face
+        new THREE.MeshBasicMaterial({ color: hexColor, wireframe: true, wireframeLinewidth: 4 }), // left face
+        new THREE.MeshBasicMaterial({ color: hexColor, wireframe: true, wireframeLinewidth: 4 }), // top face
+        new THREE.MeshBasicMaterial({ color: hexColor, wireframe: true, wireframeLinewidth: 4 }), // bottom face
         texture, // front face
-        new THREE.MeshBasicMaterial({ color: hexColor }) // back face
+        new THREE.MeshBasicMaterial({ color: hexColor, wireframe: true, wireframeLinewidth: 4 }) // back face
      ]; 
      var containerTexture = new THREE.MeshFaceMaterial(containerMaterials);
 

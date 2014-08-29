@@ -6,35 +6,41 @@ function Gate(posX, posY, posZ) {
   };
 
   this.init = function (scene) {
-     this.material = new THREE.MeshLambertMaterial({ color: 0xcccccc, overdraw: true });
-     this.montagem = new THREE.Geometry();
+     this.gate = new THREE.Object3D();
+     var material = new THREE.MeshLambertMaterial({ color: 0xcccccc, overdraw: true });
+     //this.montagem = new THREE.Geometry();
 
-     this.colunaDireita = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 10));
-     this.colunaDireita.position.y = 40 / 2;
-     this.colunaDireita.position.z = -50;
-     THREE.GeometryUtils.merge(this.montagem, this.colunaDireita);
+     var colunaDireita = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 10), material);
+     colunaDireita.position.y = 40 / 2;
+     colunaDireita.position.z = -50;
+      //THREE.GeometryUtils.merge(this.montagem, this.colunaDireita);
+     this.gate.add(colunaDireita);
 
-     this.colunaEsquerda = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 10));
-     this.colunaEsquerda.position.y = 40 / 2;
-     this.colunaEsquerda.position.z = 50;
-     THREE.GeometryUtils.merge(this.montagem, this.colunaEsquerda);
+     var colunaEsquerda = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 10), material);
+     colunaEsquerda.position.y = 40 / 2;
+     colunaEsquerda.position.z = 50;
+      //THREE.GeometryUtils.merge(this.montagem, this.colunaEsquerda);
+     this.gate.add(colunaEsquerda);
 
-     this.barra = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 110));
-     this.barra.position.y = 40;
-     this.barra.position.z = 0;
-     THREE.GeometryUtils.merge(this.montagem, this.barra);
+     var barra = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 110), material);
+     barra.position.y = 40;
+     barra.position.z = 0;
+      //THREE.GeometryUtils.merge(this.montagem, this.barra);
+     this.gate.add(barra);
 
-     this.paredeEsquerda = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 100));
-     this.paredeEsquerda.position.y = 40 / 2; //0
-     this.paredeEsquerda.position.z = -110; //-110
-     THREE.GeometryUtils.merge(this.montagem, this.paredeEsquerda);
+     var paredeEsquerda = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 100), material);
+     paredeEsquerda.position.y = 40 / 2; //0
+     paredeEsquerda.position.z = -110; //-110
+      //THREE.GeometryUtils.merge(this.montagem, this.paredeEsquerda);
+     this.gate.add(paredeEsquerda);
 
-     this.paredeDireita = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 100));
-     this.paredeDireita.position.y = 40 / 2; //0
-     this.paredeDireita.position.z = 110; //-110
-     THREE.GeometryUtils.merge(this.montagem, this.paredeDireita);
+     var paredeDireita = new THREE.Mesh(new THREE.BoxGeometry(10, 40, 100), material);
+     paredeDireita.position.y = 40 / 2; //0
+     paredeDireita.position.z = 110; //-110
+      //THREE.GeometryUtils.merge(this.montagem, this.paredeDireita);
+     this.gate.add(paredeDireita);
 
-     this.gate = new THREE.Mesh(this.montagem, this.material);
+     //this.gate = new THREE.Mesh(this.montagem, this.material);
      this.gate.position.x = posX;
      this.gate.position.y = posY;
      this.gate.position.z = posZ;

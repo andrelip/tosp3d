@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\droid_sans_mono_regular.typeface.js" />
     <Content Include="fonts\helvetiker_regular.typeface.js" />
     <Content Include="index.html" />
     <Content Include="js\camera.js" />
